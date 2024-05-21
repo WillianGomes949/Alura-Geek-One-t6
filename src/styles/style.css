@@ -1,1 +1,37 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --cor-principal: #9303a6;
+}
+h1, h2 {
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+p {
+    font-family: 'IMB Plex Mono', sans-serif;
+    font-weight: 100;
+    font-size: 0.7rem;
+}
+
+.btn_1 {
+    background-color:var(--cor-principal) !important;
+    color: white;
+}
+.btn_1:hover {
+    background-color: #5d04d9 !important;
+    color: white;
+}
+.btn_2 {
+    border-color: var(--cor-principal)!important;
+    color: var(--cor-principal);
+}
+.btn_2:hover {
+    background-color: #5d04d9 !important;
+    color: white;
+}
+
+input:focus {
+    box-shadow: 0 0 0 .2rem var(--cor-principal) !important;
+}
