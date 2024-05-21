@@ -4,11 +4,17 @@
 
 :root {
     --cor-principal: #9303a6;
+    --cor-secundaria: #5d04d9;
 }
 
 header, footer {
     background-color: #9303a6 !important;
 }
+
+header {
+    height: 60px;
+}
+
 h1, h2 {
     font-family: 'Press Start 2P', sans-serif;
 }
@@ -23,19 +29,44 @@ p {
     background-color:var(--cor-principal) !important;
     color: white;
 }
+
 .btn_1:hover {
-    background-color: #5d04d9 !important;
+    background-color: var(--cor-secundaria) !important;
     color: white;
 }
+
 .btn_2 {
     border-color: var(--cor-principal)!important;
     color: var(--cor-principal);
 }
+
 .btn_2:hover {
-    background-color: #5d04d9 !important;
+    background-color: var(--cor-secundaria) !important;
     color: white;
 }
 
 input:focus {
     box-shadow: 0 0 0 .2rem var(--cor-principal) !important;
 }
+
+#produtos {
+    height: 420px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgba(93, 4, 217, 0.158);
+    border-radius: 5px;
+    padding: 5px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: var(--cor-principal); 
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-secundaria); 
+  }
