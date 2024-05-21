@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "vite": "^5.2.11"
+  },
+  "name": "alura_geek_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Willian Gomes",
+  "license": "ISC",
+  "description": "Projeto Alura Geek do Curso de Front-end da Alura"
+}
