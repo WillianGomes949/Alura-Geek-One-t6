@@ -5,6 +5,10 @@
 :root {
     --cor-principal: #9303a6;
 }
+
+header, footer {
+    background-color: #9303a6 !important;
+}
 h1, h2 {
     font-family: 'Press Start 2P', sans-serif;
 }
@@ -12,7 +16,7 @@ h1, h2 {
 p {
     font-family: 'IMB Plex Mono', sans-serif;
     font-weight: 100;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
 }
 
 .btn_1 {
