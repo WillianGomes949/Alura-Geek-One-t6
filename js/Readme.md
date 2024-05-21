@@ -9,4 +9,4 @@ tecnologias usadas:
 - Node.js
 - npm
 - Bootstrap
-- Vite
+- Vite.
