@@ -3,7 +3,7 @@ let produtos = [];
 const elementoParaIserirProdutos = document.getElementById('produtos');
 
 async function getBuscarProdutosDaApi() {
-    const conexao = await fetch('https://json-server-vercel-henna-nu.vercel.app/produtos');
+    const conexao = await fetch('http://localhost:3000/produtos');
     produtos = await conexao.json();
     exibirProdutosNaTela(produtos);
 }
@@ -32,39 +32,8 @@ function exibirProdutosNaTela(listaDeProdutos) {
     });
 }
 
-/*
-
-async function buscaProduto(termoDeBusca) {
-    const conexao = await fetch(`https://json-server-vercel-henna-nu.vercel.app/produtos?q=${termoDeBusca}`);
-    const conexaoConvertida = await conexao.json();
-
-    return conexaoConvertida;
-}
-
-
-async function buscarProduto(evento) {
-    evento.preventDefault();
-    const dadosDePesquisa = document.querySelector("[data-pesquisa]").value;
-    const busca = await conectaApi.getBuscarProduto(dadosDePesquisa);
-
-    const lista = document.querySelector("[data-lista]");
-
-    while (lista.firstChild) {
-        lista.removeChild(lista.firstChild);
-    }
-
-    busca.forEach(elemento => lista.appendChild(
-        constroiCard(elemento.nome, elemento.preco, elemento.imagem)))
-}
-
-const botaoDePesquisa = document.querySelector("[data-botao-pesquisa]");
-
-botaoDePesquisa.addEventListener("click", evento => getBuscarProdutosDaApi(evento))
-
-*/
-
 async function adicionarProdutos(nome, preco, imagem) {
-    const conexao = await fetch('https://json-server-vercel-henna-nu.vercel.app/produtos', {
+    const conexao = await fetch('http://localhost:3000/produtos', {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -96,30 +65,3 @@ async function criarProduto(evento) {
 }
 
 formulario.addEventListener("submit", criarProduto);
-
-const apagarProduto = document.querySelector("#lixeira");
-
-async function deletarProduto(id) {
-    try {
-        const resposta = await fetch(`https://json-server-vercel-henna-nu.vercel.app/produtos/${id}`, {
-            method: 'DELETE'
-        });
-
-        if (resposta.status === 200) {
-            console.log('Produto deletado com sucesso!');
-        } else {
-            console.error('Erro ao deletar o produto.');
-        }
-    } catch (erro) {
-        console.error('Ocorreu um erro na requisição:', erro);
-    }
-}
-
-// Obtém o ID do produto associado ao elemento da lixeira (por exemplo, através de um atributo de dados)
-const idDoProduto = apagarProduto.dataset.id;
-
-apagarProduto.addEventListener('click', () => {
-    deletarProduto(idDoProduto); 
-});
-
-

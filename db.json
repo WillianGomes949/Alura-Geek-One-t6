@@ -89,6 +89,12 @@
       "nome": "Batman 2",
       "preco": 150,
       "imagem": "https://i.ebayimg.com/images/g/5-wAAOSwDk5Tu6D4/s-l300.jpg"
+    },
+    {
+      "id": "ae54",
+      "nome": "Naruto",
+      "preco": 55,
+      "imagem": "https://ae01.alicdn.com/kf/H4b6e1747d5c849d1a1892834ce0e6e437/Anime-Naruto-Uzumaki-Action-Figures-PVC-Naruto-Kurama-Figurine-Model-Ninetales-Shippuden-Toys-for-Children-GK.jpg_220x220q90.jpg"
     }
   ]
 }
