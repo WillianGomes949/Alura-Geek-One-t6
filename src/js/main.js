@@ -1,5 +1,5 @@
 let produtos = [];
-const endPointDaApi = 'http://localhost:3000/produtos';
+const endPointDaApi = "https://json-server-vercel-henna-nu.vercel.app/produtos";
 
 
 const elementoParaIserirProdutos = document.getElementById('produtos');
@@ -37,7 +37,7 @@ function exibirProdutosNaTela(listaDeProdutos) {
 /*
 
 async function buscaProduto(termoDeBusca) {
-    const conexao = await fetch(`http://localhost:3000/produtos?q=${termoDeBusca}`);
+    const conexao = await fetch(`https://json-server-vercel-henna-nu.vercel.app/produtos?q=${termoDeBusca}`);
     const conexaoConvertida = await conexao.json();
 
     return conexaoConvertida;
