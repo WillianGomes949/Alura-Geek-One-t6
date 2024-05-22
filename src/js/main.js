@@ -23,8 +23,8 @@ function exibirProdutosNaTela(listaDeProdutos) {
                             <span id="preco_do_produto">${produto.preco}</span> 
                             </i>
                     </a>                
-                    <span>
-                    <i class="btn bi bi-trash3-fill" style="color: #9303a6;" id="lixeira"></i>
+                    <span id="lixeira">
+                    <i class="btn bi bi-trash3-fill" style="color: #9303a6;"></i>
                     </span>
                 </div>
             </div>
