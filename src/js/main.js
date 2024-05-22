@@ -97,14 +97,11 @@ async function criarProduto(evento) {
 
 formulario.addEventListener("submit", criarProduto);
 
-
 const apagarProduto = document.querySelector("#lixeira");
 
-
-
-async function deletarProduto(apagarProduto) {
+async function deletarProduto(id) {
     try {
-        const resposta = await fetch(`https://json-server-vercel-henna-nu.vercel.app/produtos/${apagarProduto}`, {
+        const resposta = await fetch(`https://json-server-vercel-henna-nu.vercel.app/produtos/${id}`, {
             method: 'DELETE'
         });
 
@@ -118,7 +115,11 @@ async function deletarProduto(apagarProduto) {
     }
 }
 
+// Obtém o ID do produto associado ao elemento da lixeira (por exemplo, através de um atributo de dados)
+const idDoProduto = apagarProduto.dataset.id;
+
 apagarProduto.addEventListener('click', () => {
-    deletarProduto(apagarProduto); 
-})
+    deletarProduto(idDoProduto); 
+});
+
 
