@@ -1,11 +1,9 @@
 let produtos = [];
-const endPointDaApi = "https://json-server-vercel-henna-nu.vercel.app/produtos";
-
 
 const elementoParaIserirProdutos = document.getElementById('produtos');
 
 async function getBuscarProdutosDaApi() {
-    const conexao = await fetch(endPointDaApi);
+    const conexao = await fetch('https://json-server-vercel-henna-nu.vercel.app/produtos');
     produtos = await conexao.json();
     exibirProdutosNaTela(produtos);
 }
@@ -66,7 +64,7 @@ botaoDePesquisa.addEventListener("click", evento => getBuscarProdutosDaApi(event
 */
 
 async function adicionarProdutos(nome, preco, imagem) {
-    const conexao = await fetch(endPointDaApi, {
+    const conexao = await fetch('https://json-server-vercel-henna-nu.vercel.app/produtos', {
         method: "POST",
         headers: {
             "Content-type": "application/json"
