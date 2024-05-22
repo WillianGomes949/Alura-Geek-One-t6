@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "json-server": "^1.0.0-beta.0",
     "vite": "^5.2.11"
   },
   "name": "alura_geek_2",

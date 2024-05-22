@@ -25,6 +25,10 @@ p {
     font-size: 0.75rem;
 }
 
+span {
+    color: var(--cor-principal)
+}
+
 .btn_1 {
     background-color:var(--cor-principal) !important;
     color: white;
