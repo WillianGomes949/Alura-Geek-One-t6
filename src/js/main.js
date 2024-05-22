@@ -5,7 +5,10 @@ const elementoParaIserirProdutos = document.getElementById('produtos');
 async function getBuscarProdutosDaApi() {
     const conexao = await fetch('http://localhost:3000/produtos');
     produtos = await conexao.json();
-    exibirProdutosNaTela(produtos);
+
+    const produtosIvertidos = produtos.reverse();
+
+    exibirProdutosNaTela(produtosIvertidos);
 }
 
 getBuscarProdutosDaApi();
@@ -23,8 +26,8 @@ function exibirProdutosNaTela(listaDeProdutos) {
                             <span id="preco_do_produto">${produto.preco}</span> 
                             </i>
                     </a>                
-                    <span id="lixeira">
-                    <i class="btn bi bi-trash3-fill" style="color: #9303a6;"></i>
+                    <span class="btn" id="lixeira" style="color: #9303a6;">
+                    <i class="bi bi-trash3-fill"></i>
                     </span>
                 </div>
             </div>
@@ -65,3 +68,5 @@ async function criarProduto(evento) {
 }
 
 formulario.addEventListener("submit", criarProduto);
+
+exibirProdutosNaTela();
