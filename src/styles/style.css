@@ -26,7 +26,12 @@ p {
 }
 
 span {
-    color: var(--cor-principal)
+    color: white
+}
+.botao {
+    background-color: var(--cor-principal) !important;
+    color: white !important;
+    border: none !important;
 }
 
 .btn_1 {
@@ -37,6 +42,10 @@ span {
 .btn_1:hover {
     background-color: var(--cor-secundaria) !important;
     color: white;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 .btn_2 {
