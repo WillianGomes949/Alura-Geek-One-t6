@@ -96,3 +96,29 @@ async function criarProduto(evento) {
 }
 
 formulario.addEventListener("submit", criarProduto);
+
+
+const apagarProduto = document.querySelector("#lixeira");
+
+
+
+async function deletarProduto(apagarProduto) {
+    try {
+        const resposta = await fetch(`https://json-server-vercel-henna-nu.vercel.app/produtos/${apagarProduto}`, {
+            method: 'DELETE'
+        });
+
+        if (resposta.status === 200) {
+            console.log('Produto deletado com sucesso!');
+        } else {
+            console.error('Erro ao deletar o produto.');
+        }
+    } catch (erro) {
+        console.error('Ocorreu um erro na requisição:', erro);
+    }
+}
+
+apagarProduto.addEventListener('click', () => {
+    deletarProduto(apagarProduto); 
+})
+
